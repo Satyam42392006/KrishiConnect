@@ -41,6 +41,12 @@ function Navbar() {
           <Link href="/#services" className="hover:text-gray-300">Services</Link>
           {/* href="/#services" = go to the services section on home page */}
 
+          <Link href="/components" className="hover:text-gray-300">Components</Link>
+          {/* href="/components" = go to component showcase */}
+
+          <Link href="/dashboard" className="hover:text-gray-300">Dashboard</Link>
+          {/* href="/dashboard" = go to the dashboard */}
+
           <Link href="/#contact" className="hover:text-gray-300">Support</Link>
           {/* href="/#contact" = go to the contact/support section on home page */}
 
