@@ -28,7 +28,7 @@ function ToastItem({ type, message, onClose }) {
   }
 
   return (
-    <div className={`flex items-center justify-between px-4 py-3 rounded-lg shadow-lg text-white ${styles[type]}>
+    <div className={`flex items-center justify-between px-4 py-3 rounded-lg shadow-lg text-white ${styles[type]}`}>
       <span>{message}</span>
       <button onClick={onClose} className="ml-4 text-white/80 hover:text-white text-lg">
         &times;
@@ -69,7 +69,7 @@ export function ToastProvider({ children }) {
           />
         ))}
       </div>
-    </ToastProvider>
+    </ToastContext.Provider>
   )
 }
 

@@ -1,5 +1,3 @@
-'use client'
-
 import './globals.css'
 import ChatBox from '../components/ChatBox'
 import { ToastProvider } from '../components/ui'

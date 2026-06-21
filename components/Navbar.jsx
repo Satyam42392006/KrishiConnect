@@ -2,14 +2,37 @@
 
 import Link from 'next/link'; // This lets us click links to go to other pages
 import websiteContent from './content'; // This imports our "settings" file!
+import { useEffect, useState } from 'react';
 
 // ========================================
 // This is the NAVBAR component!
 // It's the bar at the top with links!
 // ========================================
 function Navbar() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check local storage for saved preference
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'true') {
+      setDarkMode(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.setItem('darkMode', newMode.toString());
+    if (newMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  };
+
   return (
-    <nav className="bg-gray-900 text-white p-4 sticky top-0 z-50"> 
+    <nav className="bg-gray-900 dark:bg-black text-white p-4 sticky top-0 z-50"> 
       {/* bg-gray-900 = dark gray background color */}
       {/* text-white = white text color */}
       {/* p-4 = padding (space inside) of 4 units */}
@@ -56,6 +79,9 @@ function Navbar() {
         </div>
 
         <div className="flex items-center gap-4"> 
+          <button onClick={toggleDarkMode} className="p-2 rounded-full bg-gray-700 hover:bg-gray-600">
+            {darkMode ? '☀️' : '🌙'}
+          </button>
           <Link href="/signin" className="hidden md:inline hover:text-gray-300">Sign In</Link>
 
           <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center"> 

@@ -13,21 +13,21 @@ function AboutPage() {
 
   // Make a feature box for each feature
   let firstFeatureBox = (
-    <div className="bg-gray-50 p-6 rounded-lg"> 
+    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"> 
       <h3 className="text-xl font-bold mb-2">{featuresList[0].title}</h3> 
-      <p className="text-gray-600">{featuresList[0].description}</p> 
+      <p className="text-gray-600 dark:text-gray-300">{featuresList[0].description}</p> 
     </div>
   );
   let secondFeatureBox = (
-    <div className="bg-gray-50 p-6 rounded-lg"> 
+    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"> 
       <h3 className="text-xl font-bold mb-2">{featuresList[1].title}</h3> 
-      <p className="text-gray-600">{featuresList[1].description}</p> 
+      <p className="text-gray-600 dark:text-gray-300">{featuresList[1].description}</p> 
     </div>
   );
   let thirdFeatureBox = (
-    <div className="bg-gray-50 p-6 rounded-lg"> 
+    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"> 
       <h3 className="text-xl font-bold mb-2">{featuresList[2].title}</h3> 
-      <p className="text-gray-600">{featuresList[2].description}</p> 
+      <p className="text-gray-600 dark:text-gray-300">{featuresList[2].description}</p> 
     </div>
   );
 
@@ -39,11 +39,11 @@ function AboutPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">{websiteContent.aboutTitle}</h1>
 
-          <p className="text-lg text-gray-700 mb-4">
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
             {websiteContent.aboutDescription1}
           </p>
 
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
             {websiteContent.aboutDescription2}
           </p>
 

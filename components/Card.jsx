@@ -8,7 +8,7 @@ function Card(props) {
   let cardDescription = props.description; // This is the description for this card
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"> 
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700"> 
       {/* bg-white = white background */}
       {/* rounded-lg = rounded corners */}
       {/* shadow-md = add a little shadow to make it look 3D */}
@@ -16,7 +16,7 @@ function Card(props) {
       {/* border = add a border line */}
       {/* border-gray-200 = light gray border color */}
 
-      <div className="h-48 bg-gray-100 flex items-center justify-center"> 
+      <div className="h-48 bg-gray-100 dark:bg-gray-700 flex items-center justify-center"> 
         {/* h-48 = 48 units tall */}
         {/* bg-gray-100 = very light gray background */}
         {/* flex items-center justify-center = put the emoji in the middle */}
@@ -35,7 +35,7 @@ function Card(props) {
         {/* font-bold = bold text */}
         {/* mb-2 = a little space below the title */}
 
-        <p className="text-gray-600">{cardDescription}</p> 
+        <p className="text-gray-600 dark:text-gray-300">{cardDescription}</p> 
         {/* text-gray-600 = medium gray text */}
 
       </div>

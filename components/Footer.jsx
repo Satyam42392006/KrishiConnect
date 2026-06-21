@@ -33,7 +33,7 @@ function Footer() {
             {/* flex = line things up next to each other */}
             {/* gap-6 = space between links */}
 
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+            <a href="https://github.com/satyam42392006" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
               GitHub
             </a>
             {/* target="_blank" = open in a new tab */}

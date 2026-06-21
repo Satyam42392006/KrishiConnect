@@ -43,7 +43,7 @@ function HomePage() {
         {/* ========================================
             OUR SERVICES SECTION
             ======================================== */}
-        <section id="services" className="py-16 bg-gray-50"> 
+        <section id="services" className="py-16 bg-gray-50 dark:bg-gray-800"> 
           {/* py-16 = lots of padding at top and bottom */}
           {/* bg-gray-50 = very light gray background */}
 
@@ -91,13 +91,13 @@ function HomePage() {
             {/* text-center = center the text */}
             {/* mb-10 = lots of space below the title */}
 
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm"> 
+            <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm"> 
               {/* bg-gray-50 = very light gray background */}
               {/* p-8 = lots of padding */}
               {/* rounded-lg = rounded corners */}
               {/* shadow-sm = tiny shadow */}
 
-              <p className="text-gray-700 mb-6">Have a question? We'd love to hear from you!</p> 
+              <p className="text-gray-700 dark:text-gray-300 mb-6">Have a question? We'd love to hear from you!</p> 
               {/* mb-6 = space below this text */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> 
@@ -105,19 +105,19 @@ function HomePage() {
                 {/* gap-6 = space between columns */}
 
                 <div> 
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label> 
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label> 
                   {/* block = take up full width */}
                   {/* text-sm = small text */}
                   {/* font-medium = medium thickness */}
                   {/* mb-2 = space below label */}
 
-                  <p className="text-gray-600">{websiteContent.contactEmail}</p> 
+                  <p className="text-gray-600 dark:text-gray-400">{websiteContent.contactEmail}</p> 
                   {/* Show email from settings file */}
                 </div>
 
                 <div> 
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label> 
-                  <p className="text-gray-600">{websiteContent.contactPhone}</p> 
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone</label> 
+                  <p className="text-gray-600 dark:text-gray-400">{websiteContent.contactPhone}</p> 
                   {/* Show phone from settings file */}
                 </div>
 
