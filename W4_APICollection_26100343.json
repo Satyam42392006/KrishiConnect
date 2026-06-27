@@ -1,0 +1,57 @@
+{
+  "name": "KrishiConnect API",
+  "description": "API endpoints for KrishiConnect services",
+  "version": "1.0.0",
+  "requests": [
+    {
+      "name": "Get All Services",
+      "method": "GET",
+      "url": "http://localhost:5000/api/services",
+      "description": "Get list of all services"
+    },
+    {
+      "name": "Get Service by ID",
+      "method": "GET",
+      "url": "http://localhost:5000/api/services/1",
+      "description": "Get a single service by ID"
+    },
+    {
+      "name": "Create Service",
+      "method": "POST",
+      "url": "http://localhost:5000/api/services",
+      "body": {
+        "type": "json",
+        "value": {
+          "title": "Soil Testing",
+          "description": "Professional soil analysis and recommendations"
+        }
+      },
+      "description": "Create a new service"
+    },
+    {
+      "name": "Update Service",
+      "method": "PUT",
+      "url": "http://localhost:5000/api/services/1",
+      "body": {
+        "type": "json",
+        "value": {
+          "title": "Crop Advisory",
+          "description": "Updated expert advice on crop selection"
+        }
+      },
+      "description": "Update an existing service"
+    },
+    {
+      "name": "Delete Service",
+      "method": "DELETE",
+      "url": "http://localhost:5000/api/services/4",
+      "description": "Delete a service"
+    },
+    {
+      "name": "Search Services",
+      "method": "GET",
+      "url": "http://localhost:5000/api/services/search?q=crop",
+      "description": "Search services by keyword"
+    }
+  ]
+}
