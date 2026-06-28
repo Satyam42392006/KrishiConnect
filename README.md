@@ -4,6 +4,12 @@
 
 This project consists of a Frontend (Next.js + Tailwind) and a Backend (FastAPI).
 
+## Swagger UI
+
+FastAPI includes **Swagger UI** by default! You can access the interactive API documentation at:
+- **Swagger UI:** http://localhost:5000/docs
+- **ReDoc:** http://localhost:5000/redoc
+
 ---
 
 ## How to Run Locally
@@ -18,16 +24,12 @@ python -m venv venv
 .\venv\Scripts\activate
 
 # Install dependencies
-pip install fastapi uvicorn python-dotenv
+pip install -r requirements.txt
 
 # Run backend server
 python main.py
 ```
 Backend will run at http://localhost:5000
-
-API documentation is available at:
-- Swagger UI: http://localhost:5000/docs
-- ReDoc: http://localhost:5000/redoc
 
 ---
 
