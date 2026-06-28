@@ -21,15 +21,16 @@ function HomePage() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/services');
+        const response = await fetch('http://127.0.0.1:5000/api/services');
         if (!response.ok) {
-          throw new Error('Failed to fetch services');
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
         setServices(data);
         addToast({ type: 'success', message: 'Services loaded successfully!' }); // Show success toast!
       } catch (err) {
-        addToast({ type: 'error', message: err.message }); // Show error toast!
+        console.error('Fetch error:', err);
+        addToast({ type: 'error', message: err.message || 'Failed to fetch services' }); // Show error toast!
       } finally {
         setLoading(false);
       }
