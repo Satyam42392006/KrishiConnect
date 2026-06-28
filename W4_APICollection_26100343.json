@@ -1,19 +1,47 @@
 {
   "name": "KrishiConnect API",
-  "description": "API endpoints for KrishiConnect services",
+  "description": "API endpoints for KrishiConnect agricultural services",
   "version": "1.0.0",
   "requests": [
     {
       "name": "Get All Services",
       "method": "GET",
       "url": "http://localhost:5000/api/services",
-      "description": "Get list of all services"
+      "description": "Get list of all services",
+      "exampleResponse": {
+        "status": 200,
+        "body": [
+          {
+            "id": 1,
+            "title": "Crop Advisory",
+            "description": "Expert advice on crop selection and cultivation"
+          },
+          {
+            "id": 2,
+            "title": "Weather Forecast",
+            "description": "Real-time weather updates for farmers"
+          },
+          {
+            "id": 3,
+            "title": "Market Prices",
+            "description": "Latest market prices for agricultural commodities"
+          }
+        ]
+      }
     },
     {
       "name": "Get Service by ID",
       "method": "GET",
       "url": "http://localhost:5000/api/services/1",
-      "description": "Get a single service by ID"
+      "description": "Get a single service by ID",
+      "exampleResponse": {
+        "status": 200,
+        "body": {
+          "id": 1,
+          "title": "Crop Advisory",
+          "description": "Expert advice on crop selection and cultivation"
+        }
+      }
     },
     {
       "name": "Create Service",
@@ -26,7 +54,15 @@
           "description": "Professional soil analysis and recommendations"
         }
       },
-      "description": "Create a new service"
+      "description": "Create a new service",
+      "exampleResponse": {
+        "status": 201,
+        "body": {
+          "id": 4,
+          "title": "Soil Testing",
+          "description": "Professional soil analysis and recommendations"
+        }
+      }
     },
     {
       "name": "Update Service",
@@ -36,22 +72,44 @@
         "type": "json",
         "value": {
           "title": "Crop Advisory",
-          "description": "Updated expert advice on crop selection"
+          "description": "Updated expert advice on crop selection and cultivation techniques"
         }
       },
-      "description": "Update an existing service"
+      "description": "Update an existing service",
+      "exampleResponse": {
+        "status": 200,
+        "body": {
+          "id": 1,
+          "title": "Crop Advisory",
+          "description": "Updated expert advice on crop selection and cultivation techniques"
+        }
+      }
     },
     {
       "name": "Delete Service",
       "method": "DELETE",
       "url": "http://localhost:5000/api/services/4",
-      "description": "Delete a service"
+      "description": "Delete a service",
+      "exampleResponse": {
+        "status": 204,
+        "body": null
+      }
     },
     {
       "name": "Search Services",
       "method": "GET",
       "url": "http://localhost:5000/api/services/search?q=crop",
-      "description": "Search services by keyword"
+      "description": "Search services by keyword",
+      "exampleResponse": {
+        "status": 200,
+        "body": [
+          {
+            "id": 1,
+            "title": "Crop Advisory",
+            "description": "Expert advice on crop selection and cultivation"
+          }
+        ]
+      }
     }
   ]
 }
